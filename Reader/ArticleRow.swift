@@ -19,7 +19,11 @@ struct ArticleRow: View {
                 Image(systemName: "star")
             }
             Text(article.title)
+                .multilineTextAlignment(.leading)
         }
+        .padding([.bottom, .top], 4)
+        .padding(.leading, 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
         
     }
 }
