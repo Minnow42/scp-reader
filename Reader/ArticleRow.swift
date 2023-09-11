@@ -12,19 +12,18 @@ struct ArticleRow: View {
     
     var body: some View {
         HStack {
-            if article.isFavorite {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-            } else {
-                Image(systemName: "star")
-            }
-            Text(article.title)
-                .multilineTextAlignment(.leading)
-        }
-        .padding([.bottom, .top], 4)
-        .padding(.leading, 10)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        
+//            if article.isFavorite {
+//                Image(systemName: "star.fill")
+//                    .foregroundColor(.yellow)
+//            } else {
+//                Image(systemName: "star")
+//            }
+            HStack {
+                Text(article.title)
+                    .multilineTextAlignment(.leading)
+            }.padding([.bottom, .top], 10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }.padding(.leading, 10)
     }
 }
 

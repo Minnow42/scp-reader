@@ -12,12 +12,19 @@ struct ReadView: View {
         @Environment(\.colorScheme) var colorScheme
         NavigationView {
             ScrollView {
-                VStack {
+                LazyVStack {
                     Section (header: Text("Series 1 (001 - 999)")) {
                         ForEach(scrapeArticles(seriesNum: 1)) { article in
-                            NavigationLink(destination: ArticleView(article: article)) {
-                                ArticleRow(article: article)
+                            Divider()
+                            HStack {
+                                Image(systemName: "star")
+                                    .padding(.leading, 10)
+                                
+                                NavigationLink(destination: ArticleView(article: article)) {
+                                    ArticleRow(article: article)
+                                }
                             }
+                            
                         }
                     }
                     //                Section (header: Text("Series 2 (1000 - 1999)")) {
