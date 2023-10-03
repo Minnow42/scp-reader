@@ -17,6 +17,12 @@ struct ReadView: View {
                         ForEach(scrapeArticles(seriesNum: 1)) { article in
                             Divider()
                             HStack {
+                                // if article.isFavorite {
+                                //    Image(systemName: "star.fill")
+                                //         .foregroundColor(.yellow)
+                                // } else {
+                                //    Image(systemName: "star")
+                                // }
                                 Image(systemName: "star")
                                     .padding(.leading, 10)
                                 
@@ -58,7 +64,7 @@ struct ReadView: View {
         
         for t in titles {
             count+=1
-            articles.append(Article(title: t, number: count, isFavorite: false))
+            articles.append(Article(title: t, isFavorite: false, number: count))
         }
         return articles
     }

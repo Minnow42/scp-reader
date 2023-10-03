@@ -12,12 +12,6 @@ struct ArticleRow: View {
     
     var body: some View {
         HStack {
-//            if article.isFavorite {
-//                Image(systemName: "star.fill")
-//                    .foregroundColor(.yellow)
-//            } else {
-//                Image(systemName: "star")
-//            }
             HStack {
                 Text(article.title)
                     .multilineTextAlignment(.leading)
@@ -29,6 +23,6 @@ struct ArticleRow: View {
 
 struct ArticleRow_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleRow(article: Article(title: "Test", number: 001, isFavorite: false))
+        ArticleRow(article: Article(title: "My Test", isFavorite: false, number: 1))
     }
 }
